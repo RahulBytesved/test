@@ -16,7 +16,7 @@ app.get("/test", (req, res) => {
   const clientIp = requestIp.getClientIp(req);
   console.log("clientIP==>>>>>>>", clientIp);
   console.log("req.ip==>>>>>", req.ip);
-  res.send(`Client's IP address is from req: ${clientIp}`);
+  res.send(`Client's IP address is from test : ${clientIp}`);
 });
 
 app.get("/test-test", (request, res) => {
@@ -27,7 +27,7 @@ app.get("/test-test", (request, res) => {
     request.socket.remoteAddress ||
     "";
   console.log("req.ip==>>>>>", ip);
-  res.send(`Client's IP address is from req: ${ip}`);
+  res.send(`Client's IP address is from test-test: ${ip}`);
 });
 
 app.listen(3000, () => {
